@@ -6,29 +6,57 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 
 ## Results
 ### Credit Resampling 
-A. Native Random Sampling 
+A. Native Random Sampling: In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. The Python implementation is simple. 
 
 ![Nativ_Random_Sampling](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Native_Random_Oversampling.png) 
 
-B. SMOTE Oversampling 
+Accuracy Score: .638 \
+Precision: High Risk .01 | Low Risk 1.00 \
+Recall: High Risk .66 | Low Risk .61 
+
+B. SMOTE Oversampling: The synthetic minority oversampling technique (SMOTE) is another oversampling approach to deal with unbalanced datasets. In SMOTE, like random oversampling, the size of the minority is increased. In SMOTE, new instances are interpolated. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created.
 
 ![Smote_Oversampling](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/SMOTE_oversampling.png)
 
-C. Cluster Centroids Undersampling 
+Accuracy Score: .659
+Precision: High Risk .01 | Low Risk 1.00
+Recall: High Risk .62 | Low Risk .69
+
+C. Cluster Centroids Undersampling: Cluster centroid undersampling is akin to SMOTE. The algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.
 
 ![Cluster_Centroids](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Cluster_Centroids.png) 
 
-D. Combination (Over and Under) Samping
+
+Accuracy Score: .544
+Precision: High Risk .01 | Low Risk 1.00
+Recall: High Risk .69 | Low Risk .40
+
+D. Combination (Over and Under) Samping: SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
+1. Oversample the minority class with SMOTE.
+2. Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
+
 
 ![Combo_Sampling](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/combo_(over_under)_samping.png)
 
+Accuracy Score: .648
+Precision: High Risk .01 | Low Risk 1.00
+Recall: High Risk .72 | Low Risk .57
+
 ### Credit Ensemble 
-E. Balanced Random Forest Classifier 
+E. Balanced Random Forest Classifier: Instead of having a single, complex tree like the ones created by decision trees, a random forest algorithm will sample the data and build several smaller, simpler decision trees
 
 ![Balanced_Random_Forest](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Balanced_Random_Forest.png)
 
-F. Easy Ensemble AdaBoost Classifier 
+Accuracy Score: .789
+Precision: High Risk .03 | Low Risk 1.00
+Recall: High Risk .70 | Low Risk .87
+
+F. Easy Ensemble AdaBoost Classifier: In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models.
 
 ![Easy_Ensemble](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Eady_Ensemble_adaBoost.png)
 
-Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+Accuracy Score: .932
+Precision: High Risk .09 | Low Risk 1.00
+Recall: High Risk .92 | Low Risk .94
+
+### Summary & Reccemendation 
