@@ -68,3 +68,5 @@ Recall: High Risk .92 | Low Risk .94
 All of the modeling using resampling garnered the same precision scores and roughly the same accuracy scores. In summary, all of the models using resampling may not be the best for identifying high risk loans because the models' accuracies are low, and the precision and recall are not good enough to state that the model will be good at classifying high risk loans.
 
 Both models using ensembling improved accuracy, precision and recall scores with Easy Ensemble AdaBoost Classfier method making the biggest improvement to the model's ability to predict high risk loans. 
+
+Of the methods we explored I recommend Easy Ensemble AdaBoost Classifer but it is important to remember that modeling is an iterative process: we may need more data, more cleaning, another model parameter, or a different model to best predict high risk loans. 
