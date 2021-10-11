@@ -4,6 +4,11 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 
 Using the credit card credit dataset from LendingClub, a peer-to-peer lending services company, we'll oversample the data using the RandomOverSampler and SMOTE algorithms, and undersample the data using the ClusterCentroids algorithm. Then, we'll use a combinatorial approach of over- and undersampling using the SMOTEENN algorithm. Next, we’ll compare two new machine learning models that reduce bias, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk. Once we’re done, we’ll evaluate the performance of these models and give a recommendation on whether they should be used to predict credit risk.
 
+## Definitions 
+Precision: Precision is the measure of how reliable a positive classification is. \
+Recall: Recall is the ability of the classifier to find all the positive samples. \
+F1: F1 score is a weighted average of the true positive rate (recall) and precision, where the best score is 1.0 and the worst is 0.0 
+
 ## Results
 ### Credit Resampling 
 A. Native Random Sampling: In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. The Python implementation is simple. 
@@ -60,9 +65,6 @@ Precision: High Risk .09 | Low Risk 1.00 \
 Recall: High Risk .92 | Low Risk .94
 
 ### Summary & Recommendation 
-Precision: Precision is the measure of how reliable a positive classification is. \
-Recall: Recall is the ability of the classifier to find all the positive samples. \
-
 All of the modeling using resampling garnered the same precision scores and roughly the same accuracy scores. In summary, all of the models using resampling may not be the best for identifying high risk loans because the models' accuracies are low, and the precision and recall are not good enough to state that the model will be good at classifying high risk loans.
 
 Both models using ensembling improved accuracy, precision and recall scores with Easy Ensemble AdaBoost Classfier method making the biggest improvement to the model's ability to predict high risk loans. 
