@@ -18,8 +18,8 @@ B. SMOTE Oversampling: The synthetic minority oversampling technique (SMOTE) is 
 
 ![Smote_Oversampling](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/SMOTE_oversampling.png)
 
-Accuracy Score: .659
-Precision: High Risk .01 | Low Risk 1.00
+Accuracy Score: .659 \
+Precision: High Risk .01 | Low Risk 1.00 \
 Recall: High Risk .62 | Low Risk .69
 
 C. Cluster Centroids Undersampling: Cluster centroid undersampling is akin to SMOTE. The algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.
@@ -27,8 +27,8 @@ C. Cluster Centroids Undersampling: Cluster centroid undersampling is akin to SM
 ![Cluster_Centroids](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Cluster_Centroids.png) 
 
 
-Accuracy Score: .544
-Precision: High Risk .01 | Low Risk 1.00
+Accuracy Score: .544 \
+Precision: High Risk .01 | Low Risk 1.00 \
 Recall: High Risk .69 | Low Risk .40
 
 D. Combination (Over and Under) Samping: SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
@@ -38,8 +38,8 @@ D. Combination (Over and Under) Samping: SMOTEENN combines the SMOTE and Edited 
 
 ![Combo_Sampling](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/combo_(over_under)_samping.png)
 
-Accuracy Score: .648
-Precision: High Risk .01 | Low Risk 1.00
+Accuracy Score: .648 \
+Precision: High Risk .01 | Low Risk 1.00 \
 Recall: High Risk .72 | Low Risk .57
 
 ### Credit Ensemble 
@@ -47,16 +47,16 @@ E. Balanced Random Forest Classifier: Instead of having a single, complex tree l
 
 ![Balanced_Random_Forest](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Balanced_Random_Forest.png)
 
-Accuracy Score: .789
-Precision: High Risk .03 | Low Risk 1.00
+Accuracy Score: .789 \
+Precision: High Risk .03 | Low Risk 1.00 \
 Recall: High Risk .70 | Low Risk .87
 
 F. Easy Ensemble AdaBoost Classifier: In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models.
 
 ![Easy_Ensemble](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Eady_Ensemble_adaBoost.png)
 
-Accuracy Score: .932
-Precision: High Risk .09 | Low Risk 1.00
+Accuracy Score: .932 \
+Precision: High Risk .09 | Low Risk 1.00 \
 Recall: High Risk .92 | Low Risk .94
 
-### Summary & Reccemendation 
+### Summary & Recommendation 
