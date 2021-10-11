@@ -10,7 +10,7 @@ Recall: Recall is the ability of the classifier to find all the positive samples
 F1: F1 score is a weighted average of the true positive rate (recall) and precision, where the best score is 1.0 and the worst is 0.0 
 
 ## Results
-### Credit Resampling 
+### Use Resampling Models to Predict Credit Risk
 A. Native Random Sampling: In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. The Python implementation is simple. 
 
 ![Nativ_Random_Sampling](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Native_Random_Oversampling.png) 
@@ -36,6 +36,7 @@ Accuracy Score: .544 \
 Precision: High Risk .01 | Low Risk 1.00 \
 Recall: High Risk .69 | Low Risk .40
 
+### Use the SMOTEENN Algorithm to Predict Credit Risk
 D. Combination (Over and Under) Samping: SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
 1. Oversample the minority class with SMOTE.
 2. Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
@@ -47,7 +48,7 @@ Accuracy Score: .648 \
 Precision: High Risk .01 | Low Risk 1.00 \
 Recall: High Risk .72 | Low Risk .57
 
-### Credit Ensemble 
+### Use Ensemble Classifiers to Predict Credit Risk 
 E. Balanced Random Forest Classifier: Instead of having a single, complex tree like the ones created by decision trees, a random forest algorithm will sample the data and build several smaller, simpler decision trees
 
 ![Balanced_Random_Forest](https://github.com/cfusco77/Credit_Risk_Analysis/blob/main/Resources/Balanced_Random_Forest.png)
